@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box {
+          position: absolute;
+          top: 100px;
+          left: 100px;
+        }
+      </style>
+    <div class="box">
+        <label>input 1:</label>
+        <input type="text" id="a">
+        <br>
+        <label>input 2:</label>
+        <input type="text" id="b">
+        <br>
+        <input type="submit" onclick="arith()">
+    </div>
+
+    <script>
+        function arith(){
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+
+
+        let sum = Number(a) + Number(b);
+        console.log('a + b =',sum);
+
+        let diff = Number(a) - Number(b);
+        console.log('a - b =',diff);
+
+        let multi = Number(a) * Number(b);
+        console.log('a * b =',multi);
+
+        let divide = Number(a) / Number(b);
+        console.log('a / b =',divide);
+
+        let mod =Number(a) % Number(b);
+        console.log('a % b =',mod);
+        
+        }
+    </script>
+</body>
+</html>

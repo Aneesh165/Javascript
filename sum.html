@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+    <div class="box">
+      <label>First number:</label>
+      <input type="text" id="a" /><br />
+      <br />
+      <label>second number:</label>
+      <input type="text" id="b" />
+      <input type="submit" onclick="sum()" />
+    </div>
+
+    <script>
+      function sum(ans) {
+        let first = document.getElementById("a").value;
+        let second = document.getElementById("b").value;
+        let ns = Number(first) + Number(second);
+        console.log(ns);
+      }
+    </script>
+  </body>
+</html>
