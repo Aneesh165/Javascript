@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Days to Weeks/Year</h1>
+    <label>Days :</label>
+    <input type="text" id="day">
+    <input type="submit" onclick="days()">
+    <h4 id="years"></h4>
+
+
+
+    <script>
+        function days(){
+            let day = document.getElementById('day').value
+            let year =Math.floor(day/365)
+            let week =Math.round((day % 365)/7)
+            let days =day-((year * 365)+(week*7))
+            
+            document.getElementById("years").innerHTML = year +" years "+ week +" weeks "+ days +" days"
+            console.log(year)
+        }
+    </script>
+</body>
+</html>
