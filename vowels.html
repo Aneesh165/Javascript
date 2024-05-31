@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Input :</label>
+    <input type="text" id="ip" />
+    <input type="submit" onclick="fun()" />
+    <h4 id="ans"></h4>
+
+    <script>
+        function fun() {
+            const ch = document.getElementById("ip").value;
+        if (
+          ch === "a" ||
+          ch === "e" ||
+          ch === "i" ||
+          ch === "o" ||
+          ch === "u"
+        ) {
+          document.getElementById("ans").innerHTML = ch + " is a Vowel.";
+        } else if (ch >= "a" && ch <= "z") {
+          document.getElementById("ans").innerHTML = ch + " is a Consonant.";
+        } else {
+          document.getElementById("ans").innerHTML = ch + " is not an Alphabet.";
+        }
+      }
+    </script>
+  </body>
+</html>

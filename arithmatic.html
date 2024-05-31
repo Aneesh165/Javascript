@@ -21,28 +21,33 @@
         <input type="text" id="b">
         <br>
         <input type="submit" onclick="arith()">
+        <p id="sum"></p>
+        <p id="difference"></p>
+        <p id="product"></p>
+        <p id="quotient"></p>
+        <p id="modulus"></p>
     </div>
+
 
     <script>
         function arith(){
         let a = document.getElementById("a").value;
         let b = document.getElementById("b").value;
 
-
         let sum = Number(a) + Number(b);
-        console.log('a + b =',sum);
+        document.getElementById("sum").innerHTML = 'sum = '+ sum;
 
         let diff = Number(a) - Number(b);
-        console.log('a - b =',diff);
+        document.getElementById("difference").innerHTML = 'Difference = '+ diff;
 
         let multi = Number(a) * Number(b);
-        console.log('a * b =',multi);
+        document.getElementById("product").innerHTML = 'Product = '+multi
 
         let divide = Number(a) / Number(b);
-        console.log('a / b =',divide);
+        document.getElementById("quotient").innerHTML = 'Quotient = '+divide
 
         let mod =Number(a) % Number(b);
-        console.log('a % b =',mod);
+        document.getElementById("modulus").innerHTML = 'Modulus = '+mod;
         
         }
     </script>
