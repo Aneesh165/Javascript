@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Enter The Number: </label>
+        <input type="text" id="one">
+        <input type="submit" onclick="ore()">
+        <h4 id="ans"></h4>
+    </div>
+    
+
+    <script>
+        function ore() {
+            let input = document.getElementById("one").value
+
+            if (input%2==0) {
+                document.getElementById("ans").innerHTML = input +" is Even"
+            }
+            else{
+                document.getElementById("ans").innerHTML = input +" is Odd"
+            }
+
+        }
+
+    </script>
+</body>
+</html>
