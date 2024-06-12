@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number</title>
+    <style>
+        .form {
+            margin-left: 200px;
+            margin-top: 100px;
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding-top: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <label>EnterThe Number:</label>
+        <input type="text" id="input" /><br />
+        <input type="button" value="Check" onclick="operation()" />
+    </form>
+    <h2 id="output"></h2>
+
+    <script>
+        function operation() {
+            var isprime = 1;
+            let number = document.getElementById("input").value;
+            for (let i = 2; i <= Number(number)/2; i++) {
+                if (number % i == 0) {
+                    var isprime = 0;
+                }
+            }
+            if (isprime == 1 && number > 1) {
+                document.getElementById("output").innerHTML = number + " is Prime";
+            }
+            else {
+                document.getElementById("output").innerHTML = number + " is Not Prime";
+            }
+        }
+    </script>
+</body>
+
+</html>
