@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter the limit:</label>
+    <input id="lim" type="text">
+    <button onclick="limit()">submit</button>
+    <p id="num"></p>
+    
+
+    <script>
+        function limit(){
+            let n = document.getElementById("lim").value;
+            let text ="";
+            for(let i=1;i<=n;i++){
+                text += i+"<br>";
+            }
+            document.getElementById("num").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

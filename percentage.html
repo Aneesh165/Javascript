@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" style="margin: 20px 0 0 20px">
+      <label>Physics</label><input id="n1" type="text" /><br />
+      <label>Chemistry</label><input id="n2" type="text" /><br />
+      <label>Biology</label><input id="n3" type="text" /><br />
+      <label>Maths</label><input id="n4" type="text" /><br />
+      <label>Computer</label><input id="n5" type="text" /><br />
+      <button onclick="percent()">Submit</button>
+      <hr />
+      <h3 id="marks"></h3>
+    </div>
+
+    <script>
+      function percent() {
+        let m1 = document.getElementById("n1").value;
+        let m2 = document.getElementById("n2").value;
+        let m3 = document.getElementById("n3").value;
+        let m4 = document.getElementById("n4").value;
+        let m5 = document.getElementById("n5").value;
+
+        let perc =
+          (Number(m1) + Number(m2) + Number(m3) + Number(m4) + Number(m5)) /
+          5.0;
+
+        if (perc >= 90) {
+          document.getElementById("marks").innerHTML = "Grade A";
+        } else if (perc >= 80) {
+          document.getElementById("marks").innerHTML = "Grade B";
+        } else if (perc >= 70) {
+          document.getElementById("marks").innerHTML = "Grade C";
+        } else if (perc >= 60) {
+          document.getElementById("marks").innerHTML = "Grade D";
+        } else if (perc >= 40) {
+          document.getElementById("marks").innerHTML = "Grade E";
+        } else {
+          document.getElementById("marks").innerHTML = "Grade F";
+        }
+      }
+    </script>
+  </body>
+</html>
