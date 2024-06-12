@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number 1 to n</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: black;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px 10px #888888;
+            background-color: #888888;
+            background-image: linear-gradient(to right, #888888, #b28383);
+            box-shadow: 10px 10px 10px 10px #888888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label>Enter The Limit:</label>
+        <input type="text" id="input" />
+        <input type="button" value="submit" onclick="operation()" />
+    </div>
+    <h2 id="output"></h2>
+
+    <script>
+        function operation() {
+            let n = document.getElementById("input").value;
+            let output = "";
+            for (let i = 2; i <= n; i++) {
+                let flag = 0;
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                if (flag == 0) {
+                    output += i + "<br>";
+                }
+            }
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+
+</html>
