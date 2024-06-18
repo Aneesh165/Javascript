@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple Calculator</title>
+    <style>
+        div {
+            background: linear-gradient(to right bottom, rgb(81, 78, 78), white);
+            height: 100px;
+            width: 750px;
+            margin-left: 200px;
+            margin-top: 180px;
+            border: 1px solid black;
+            font-size: 20px;
+            padding-left: 35px;
+            padding-top: 65px;
+            border-radius: 11px;
+        }
+
+        #operator {
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label>Enter :</label>
+        <input type="text" id="num1" />
+        <input type="text" id="operator" />
+        <input type="text" id="num2" />
+        <input type="button" value="=" onclick="opera()" />
+        <h2 id="output"></h2>
+    </div>
+
+    <script>
+        function opera() {
+            let n1 = document.getElementById("num1").value;
+            let n2 = document.getElementById("num2").value;
+            let op = document.getElementById("operator").value;
+            //     if(op == '+'){
+            //         document.getElementById("output").innerHTML = n1 + "+" + n2 + "="  + ( Number(n1) + Number(n2));
+            //     }
+            //     else if(op == '-'){
+            //         document.getElementById("output").innerHTML = n1 + "-" + n2 + "=" + ( Number(n1) - Number(n2));
+            //     }
+            //     else if(op == '*'){
+            //         document.getElementById("output").innerHTML = n1 + "*" + n2 + "=" + ( Number(n1) * Number(n2));
+            //    }
+            //     else if(op == '/'){
+            //         document.getElementById("output").innerHTML = n1 + "/" + n2 + "=" + ( Number(n1) / Number(n2));
+            //    }
+            //    else{
+            //     document.getElementById("output").innerHTML = "Invalid Operator";
+            //    }
+            switch (true) {
+                case op == "+":
+                    document.getElementById("output").innerHTML =
+                        n1 + "+" + n2 + "=" + (Number(n1) + Number(n2));
+                    break;
+                case op == "-":
+                    document.getElementById("output").innerHTML =
+                        n1 + "-" + n2 + "=" + (Number(n1) - Number(n2));
+                    break;
+                case op == "*":
+                    document.getElementById("output").innerHTML =
+                        n1 + "*" + n2 + "=" + Number(n1) * Number(n2);
+                    break;
+                case op == "/":
+                    document.getElementById("output").innerHTML =
+                        n1 + "/" + n2 + "=" + Number(n1) / Number(n2);
+                    break;
+                default:
+                    document.getElementById("output").innerHTML = "Invalid Operator";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
