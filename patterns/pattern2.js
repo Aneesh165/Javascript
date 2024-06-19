@@ -11,4 +11,4 @@ function pattern(N) {
     console.log(order);
   }
 }
-pattern(5);
+pattern(10);
