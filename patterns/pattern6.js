@@ -1,10 +1,10 @@
 function pattern(N) {
-    for (let i = 1; i <= N; i++) {
+    for (let row = 1; row <= N; row++) {
         let sm = " ";
-        for (let j = 0; j <= N - i; j++) {
+        for (let col = 0; col <= N - row; col++) {
             sm += " ";
         }
-        for (let k = 0; k < 2 * i - 1; k++) {
+        for (let col = 0; col < 2 * row - 1; col++) {
             sm += "*";
         }
         console.log(sm);
