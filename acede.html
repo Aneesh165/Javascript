@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        height: 600px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      /* .sub{
+            display: flex;
+            padding-top: 60px;
+            justify-content: center;
+            font-size: 18px;     
+        } */
+    </style>
+  </head>
+  <body>
+    <div class="sub">
+      <label>Enter the numbers:</label>
+      <input type="text" id="num" />
+    </div>
+    <div class="main">
+      <div class="left">
+        <p id="ascending"></p>
+        <button onclick="ascending()">Ascending</button>
+      </div>
+      <div class="right">
+        <p id="descending"></p>
+        <button onclick="descending()">Descending</button>
+      </div>
+    </div>
+
+    <script>
+      function ascending() {
+        let arr = document.getElementById("num").value;
+        let narr = arr.split(",").map(Number);
+        console.log(narr);
+      }
+      function ascending() {
+        let arr = document.getElementById("num").value;
+        let narr = arr.split(",").map(Number);
+        narr.sort((a, b) => a - b);
+        document.getElementById("ascending").innerText = narr;
+        console.log(narr);
+      }
+      function descending() {
+        let arr = document.getElementById("num").value;
+        let narr = arr.split(",").map(Number);
+        narr.sort((b, a) => a - b);
+        document.getElementById("descending").innerHTML = narr;
+        console.log(narr);
+      }
+    </script>
+  </body>
+</html>
