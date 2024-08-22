@@ -1,5 +1,5 @@
 const initialSpeed = 60;
-let route = [0, 30, 0, -45, 0];
+let route = [0, 30, 0, -45, 50, 25, 30];
 let plusV = 0;
 let minusV = 0;
 
@@ -15,6 +15,7 @@ let finalSpeed = initialSpeed - plusV - minusV;
 
 if (finalSpeed > 0) {
     console.log("Final Speed is: " + finalSpeed + ". You Won!");
-} else {
+} else if (finalSpeed <= 0) {
+    finalSpeed = 0;
     console.log("Final Speed is: " + finalSpeed + ". You lost your life.");
 }
