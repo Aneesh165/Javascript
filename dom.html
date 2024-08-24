@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            background-color: red;
+            color: aquamarine;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hello">hello world</h1>
+    <h1 class="hai">hello world</h1>
+    <h1 class="hai">hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <script>
+
+        // let element  = document.getElementById('hello')
+        // element.innerHTML =  "welcome"
+
+        // let element =  document.getElementsByClassName('hai')
+        // element[0].innerHTML="welcome"
+        // element[1].innerHTML="welcome"
+
+        // let element = document.getElementsByTagName('h1')
+        // console.log(element);
+
+        // let element  = document.querySelectorAll('#hello')
+        // console.log(element);
+
+
+    let element  = document.getElementById('hello')
+    // element.style.fontSize="20px"
+    // element.classList.add('myclass')
+        
+    let newElement = document.createElement('div')
+    newElement.setAttribute("id","hello")
+    newElement.style.color="blue"
+    newElement.innerHTML = "new Element"
+    console.log(newElement);
+
+
+    document.body.appendChild(newElement)
+
+
+    document.body.removeChild(newElement)
+
+    
+        
+        
+
+    </script>
+</body>
+</html>
