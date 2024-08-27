@@ -7,4 +7,4 @@ console.log(d)
 }
 
 
-arr(2,4,result);
+arr(2,5,result);
