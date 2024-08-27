@@ -1,6 +1,6 @@
 let arr = (a,b,callback)=>{
     let c=a*b;
-    callback(c)
+    callback("result is:"+c)
 }
 function result(d){
 console.log(d)
