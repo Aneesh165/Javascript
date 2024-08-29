@@ -60,3 +60,46 @@
 // .then(order=>sendconformation(order))
 // .then(message=>console.log(message))
 // .catch(error=>console.error(error))
+
+
+//using Async and Await
+
+function fetchuserdata() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("user data fetched");
+            resolve({ userid: 1 });
+        }, 1000);
+    });
+}
+
+function fetchuserorder(userdata) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`user order fetched for user ${userdata.userid}`);
+            resolve("order1, order2");
+        }, 2000);
+    });
+}
+
+function sendconformation(order) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`confirmation mail sent for orders: ${order}`);
+            resolve("mail sent");
+        }, 3000);
+    });
+}
+
+async function processOrder() {
+    try {
+        const userdata = await fetchuserdata();
+        const order = await fetchuserorder(userdata);
+        const message = await sendconformation(order);
+        console.log(message);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+processOrder();
